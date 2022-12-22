@@ -1,16 +1,13 @@
 .card {
-  height: 100px;
+  height: 60px;
   width: 50%;
-  background-color: #735bf2;
+  background-color: #07b3c7;
   color: white;
+  opacity: 1;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-}
-
-.card strong {
-  font-size: 18px;
 }

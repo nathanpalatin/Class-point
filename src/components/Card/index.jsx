@@ -4,8 +4,8 @@ export function Card({ name, time }){
 
   return (
     <div className="card">
-      <strong>{name}</strong>
-      <small>{time}</small>
+      <span>{name}</span>
+      <span>{time}</span>
     </div>
   )
 }

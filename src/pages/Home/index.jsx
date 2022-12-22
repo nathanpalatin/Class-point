@@ -23,12 +23,13 @@ export function Home(){
     }   
 
     setStudents(prevState => [...prevState, newStudent])
-    
+  
     e.target.reset();
 
   }
   
   return (
+    
     <div className="container">
       <header>
         <h1>Lista de Presença</h1>
@@ -44,7 +45,7 @@ export function Home(){
       {
       students.map(student => <Card key={student.id} name={student.name} time={"Hora: " + student.time}/>)
       }
-      
       </div>
+  
   )
 }
