@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.container form {
+  width: 50%;
+}
+
 .container header {
   width: 50%;
   margin: 84px 0 24px;
@@ -30,8 +34,8 @@
   font-weight: lighter;
 }
 
-.container input {
-  width: 50%;
+.container form input {
+  width: 100%;
   padding: 24px;
 
   background: #E6E6E6;
@@ -41,8 +45,8 @@
   font-size: 16px;
 }
 
-.container button{
-  width: 50%;
+.container form button{
+  width: 100%;
   font-family: 'Open Sans';
   background: #ea4c89;
   font-weight: 700;
