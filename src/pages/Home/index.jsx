@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Card } from '../../components/Card';
+import { DiApple } from "react-icons/di";
 import './styles.css';
 
 export function Home(){
@@ -32,7 +33,7 @@ export function Home(){
     
     <div className="container">
       <header>
-        <h1>Lista de Presença</h1>
+        <h1><DiApple /> Lista de Presença</h1>
         <div>
           <strong>Nathan Palatin</strong>
           <img src={myAvatar} alt="Foto de perfil" />
