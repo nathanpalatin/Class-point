@@ -9,11 +9,11 @@
 }
 
 .container form {
-  width: 50%;
+  width: 70%;
 }
 
 .container header {
-  width: 50%;
+  width: 70%;
   margin: 84px 0 24px;
   display: flex;
   justify-content: space-between;
@@ -36,8 +36,8 @@
 
 .container form input {
   width: 100%;
-  padding: 24px;
-
+  padding:20px;
+  outline: none;
   background: #E6E6E6;
   border: none;
   border-radius: 5px;
@@ -48,10 +48,10 @@
 .container form button{
   width: 100%;
   font-family: 'Open Sans';
-  background: #ea4c89;
+  background: #0b3e52;
   font-weight: 700;
   color: white;
-  margin: 12px 0 84px;
+  margin: 12px 0 34px;
   padding: 20px;
   border: none;
   border-radius: 6px;
