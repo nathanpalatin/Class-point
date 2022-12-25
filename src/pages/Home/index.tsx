@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 import './styles.css';
+import { IoLocation } from 'react-icons/io5';
+import { FaDev } from 'react-icons/fa';
+import reactjs from '../../assets/reactjs.svg';
+import reactnative from '../../assets/react-native.svg';
+import php from '../../assets/php.svg';
 
 type ProfileResponse = {
   name: string;
@@ -9,6 +14,8 @@ type ProfileResponse = {
   html_url: string;
   location: string;
 }
+
+
 
 type User = {
   name: string;
@@ -47,28 +54,45 @@ export function Home() {
     <>
       <div className="header"></div>
       <aside>
-      <div className="cards">
+      <div className="cards profile">
             
             <img src={user.avatar} alt="My Profile" />
             <div>
             <h1>{user.name}</h1>
-            <span>{user.bio}</span>
-            <span>{user.location}</span>
+            <span><FaDev /> {user.bio}</span>
+            <span><IoLocation /> {user.location}</span>
           
             </div>
             </div>
+     
+
+     
+      <div className="cards friends">
+          <h1>Relacionamentos</h1>
+          <div>
+            <span>Nenhuma conexão até o momento.</span>
+          </div>
+      </div>
+
+      <div className="cards wins">
+          <h1>Insígnias</h1>
+          <div>
+            <img src={reactjs} className="tooltip" data-tip="ReactJS" alt="React JS" />
+            <img src={reactnative} data-tip="React Native" alt="React Native" />
+            <img src={php} data-tip="PHP" alt="PHP" />
+          </div>
+      </div>
       </aside>
       
     <main>
         <div className="cards">
         <h1>My Projects | React</h1>
         </div>
-        <section className="cards">
-             
-        </section>      
+    
+       
       </main>
       <footer>
-      <a href={user.url} target="_blank" rel="external">PALATINI &copy; {moonLanding.getFullYear()}  - All rights reserved.</a>
+      <a href={user.url} target="_blank" rel="external">PALATINI &copy; {moonLanding.getFullYear()}  - Todos os direitos reservados.</a>
       </footer>
     </>
   )
