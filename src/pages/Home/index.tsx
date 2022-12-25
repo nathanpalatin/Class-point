@@ -1,26 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Cardprops } from '../../components/Card';
-import { GoMarkGithub } from 'react-icons/go';
+import { useState, useEffect } from 'react';
 import './styles.css';
 
 type ProfileResponse = {
   name: string;
   avatar_url: string;
   login: string;
+  bio: string;
+  html_url: string;
+  location: string;
 }
 
 type User = {
   name: string;
   avatar: string;
   login: string;
+  bio: string;
+  url: string;
+  location: string;
 }
 
-export function Home(){
+export function Home() {
 
-  const [studentName, setStudentName] = useState("");
-  const [students, setStudents] = useState<Cardprops[]>([]);
+  const moonLanding = new Date();
+
   const [user, setUser] = useState<User>({} as User);
- 
 
   useEffect(() => {
     async function fetchData(){
@@ -31,63 +34,42 @@ export function Home(){
       name: data.name,
       avatar: data.avatar_url,
       login: data.login,
+      bio: data.bio,
+      url: data.html_url,
+      location: data.location
      });
     }
 
     fetchData();
   }, []);
 
-
-  function uniqueID(id: number | string) {
-    return Math.floor(Math.random() * Date.now()).toString(16)
-  };
-
-
- 
-  function handleAddStudent (e: any){
-    e.preventDefault();
-    
-      setTimeout(() => {
-      const newStudent = {
-        name: studentName,
-        time: new Date().toLocaleTimeString("pt-br", {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit'
-        })       
-      }   
-
-    setStudents(prevState => [...prevState, newStudent])
-
-    console.log(`O ${newStudent.name} está presente, chegou as ${newStudent.time}`);
-    
-    e.target.reset();
-
-  }, 500)
-}
-  
   return (
-    
-    <div className="container">
-      <header>
-        <h2>Lista de Presença</h2>
-        <div>
-          <span><GoMarkGithub /> {user.login}</span>
-          <img src={user.avatar} alt="Foto de perfil" />
+    <>
+      <div className="header"></div>
+      <aside>
+      <div className="cards">
+            
+            <img src={user.avatar} alt="My Profile" />
+            <div>
+            <h1>{user.name}</h1>
+            <span>{user.bio}</span>
+            <span>{user.location}</span>
+          
+            </div>
+            </div>
+      </aside>
+      
+    <main>
+        <div className="cards">
+        <h1>My Projects | React</h1>
         </div>
-      </header>
-      <form onSubmit={handleAddStudent}>
-        <input type="text" required onChange={e => setStudentName(e.target.value)} placeholder="Digite o nome do aluno..." />
-        <button type="submit"  >Adicionar</button>
-      </form>
-      {
-      students.map(student =>
-      <Card
-        key={uniqueID(99999)}
-        name={student.name} 
-        time={student.time}
-      />
-      )}
-    </div>
+        <section className="cards">
+             
+        </section>      
+      </main>
+      <footer>
+      <a href={user.url} target="_blank" rel="external">PALATINI &copy; {moonLanding.getFullYear()}  - All rights reserved.</a>
+      </footer>
+    </>
   )
 }

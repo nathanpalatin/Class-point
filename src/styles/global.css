@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins&family=Open+Sans&family=Roboto&family=Merriweather+Sans:wght@400;500;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +7,6 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-size: 16px;
-  background: #141415;
+  overflow-y: hidden;
 }
 
