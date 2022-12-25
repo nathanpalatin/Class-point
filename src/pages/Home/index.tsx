@@ -85,11 +85,13 @@ export function Home() {
       </aside>
       
     <main>
-        <div className="cards">
-        <h1>My Projects | React</h1>
+        <div className="cards feed">
+        <h1>Atualizações</h1>
+        <div>
+        <span>Nenhuma novidade até o momento.</span>
         </div>
-    
-       
+        </div>
+          
       </main>
       <footer>
       <a href={user.url} target="_blank" rel="external">PALATINI &copy; {moonLanding.getFullYear()}  - Todos os direitos reservados.</a>
