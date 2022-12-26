@@ -21,7 +21,6 @@ export function Home(){
   const [studentName, setStudentName] = useState("");
   const [students, setStudents] = useState<Cardprops[]>([]);
   const [user, setUser] = useState<User>({} as User);
- 
 
   useEffect(() => {
     async function fetchData(){

@@ -64,7 +64,7 @@ export function Home() {
         name: textPost      
       }   
 
-    setPost(prevState => [...prevState, newPost]);
+    setPosts(prevState => [...prevState, newPost]);
     
     e.target.reset();
 
