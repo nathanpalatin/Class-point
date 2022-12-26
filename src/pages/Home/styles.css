@@ -217,7 +217,7 @@ footer{
   grid-area: f;
 }
 
-a.tooltip::before {
+.tooltip::before {
   content: attr(data-tip);
   font-family: arial, sans-serif;
   font-size: 10px;
@@ -241,7 +241,7 @@ a.tooltip::before {
   text-shadow: none;
   }
   
-  a.tooltip:hover::before {
+  .tooltip:hover::before {
   opacity: 1;
   /* bottom: -35px; */
   }
