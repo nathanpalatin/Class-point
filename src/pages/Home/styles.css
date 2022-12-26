@@ -40,10 +40,6 @@ body{
     align-items: flex-start;
 }
 
-main.cards:nth-child(1) {
-  align-items: flex-start;
-}
-
 .cards:nth-child(3){
   align-items: flex-start;
 }
@@ -218,7 +214,7 @@ footer{
 }
 
 form input {
-  width: 80vw;
+  width: 100%;
   padding:20px;
   outline: none;
   background: #E6E6E6;
