@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Card, Cardprops } from '../../components/Card';
 import './styles.css';
 import { IoLocation } from 'react-icons/io5';
 import { FaDev } from 'react-icons/fa';
@@ -31,6 +32,9 @@ export function Home() {
   const moonLanding = new Date();
 
   const [user, setUser] = useState<User>({} as User);
+  
+  const [studentName, setStudentName] = useState("");
+  const [students, setStudents] = useState<Cardprops[]>([]);
 
   useEffect(() => {
     async function fetchData(){
@@ -49,7 +53,33 @@ export function Home() {
 
     fetchData();
   }, []);
+  
+  function uniqueID(id: number | string) {
+    return Math.floor(Math.random() * Date.now()).toString(16)
+  }
+  
+  function handleAddStudent (e: any){
+    e.preventDefault();
+    
+      setTimeout(() => {
+      const newStudent = {
+        name: studentName,
+        time: new Date().toLocaleTimeString("pt-br", {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        })       
+      }   
 
+    setStudents(prevState => [...prevState, newStudent])
+
+    //console.log(`O ${newStudent.name} está presente, chegou as ${newStudent.time}`);
+    
+    e.target.reset();
+
+  }, 500)
+}
+  
   return (
     <>
       <div className="header"></div>
@@ -88,6 +118,21 @@ export function Home() {
         <div className="cards feed">
         <h1>Atualizações</h1>
         <div>
+            <form onSubmit={handleAddStudent}>
+        <input type="text" required onChange={e => setStudentName(e.target.value)} placeholder="O que está acontecendo?" />
+        <button type="submit">Adicionar</button>
+      </form>
+     
+      {
+      students.map(student =>
+       
+      <Card
+        key={uniqueID(99999)}
+        name={student.name} 
+        time={student.time}
+      />
+     
+      )}
         <span>Nenhuma novidade até o momento.</span>
         </div>
         </div>
