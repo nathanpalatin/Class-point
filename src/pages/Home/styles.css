@@ -40,6 +40,10 @@ body{
     align-items: flex-start;
 }
 
+main.cards:nth-child(1) {
+  align-items: inherit;
+}
+
 .cards:nth-child(3){
   align-items: flex-start;
 }
@@ -143,6 +147,10 @@ section {
     display: flex;
     flex-direction: row;
 
+  }
+
+  form input {
+    width: 80vw;
   }
 
 }

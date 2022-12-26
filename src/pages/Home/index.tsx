@@ -16,8 +16,6 @@ type ProfileResponse = {
   location: string;
 }
 
-
-
 type User = {
   name: string;
   avatar: string;
@@ -34,7 +32,7 @@ export function Home() {
   const [user, setUser] = useState<User>({} as User);
   
   const [textPost, setPost] = useState("");
-  const [students, setStudents] = useState<Cardprops[]>([]);
+  const [posts, setPosts] = useState<Cardprops[]>([]);
 
   useEffect(() => {
     async function fetchData(){
@@ -63,7 +61,7 @@ export function Home() {
     
       setTimeout(() => {
       const newPost = {
-        post: textPost      
+        name: textPost      
       }   
 
     setPost(prevState => [...prevState, newPost]);
@@ -117,10 +115,10 @@ export function Home() {
       </form>
    
       {
-      students.map(student => 
+      posts.map(post => 
       <Card
         key={uniqueID(99999)}
-        name={student.post}
+        name={post.name}
       />
      
       )}
