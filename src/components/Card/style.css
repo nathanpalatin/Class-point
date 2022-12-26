@@ -1,5 +1,5 @@
 .card {
-  height: 60px;
+  height: 50px;
   width: 100%;
   background-color: #3e545267;
   color: white;
@@ -8,5 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 22px;
+  font-size: 60%;
 }

@@ -127,10 +127,11 @@ export function Home() {
       <Card
         key={uniqueID(99999)}
         name={student.name}
-        time={student.time}
       />
      
       )}
+
+    {students.length ? students : 'Nenhuma novidade até o momento.'}
         
         </div>
         </div>
