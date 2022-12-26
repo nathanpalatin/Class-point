@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Card, Cardprops } from '../../components/Card';
 import './styles.css';
-import { IoLocation } from 'react-icons/io5';
+import { IoLocation, IoSend } from 'react-icons/io5';
 import { FaDev } from 'react-icons/fa';
 import reactjs from '../../assets/reactjs.svg';
 import reactnative from '../../assets/react-native.svg';
@@ -120,20 +120,19 @@ export function Home() {
         <div>
             <form onSubmit={handleAddStudent}>
         <input type="text" required onChange={e => setStudentName(e.target.value)} placeholder="O que está acontecendo?" />
-        <button type="submit">Adicionar</button>
+        <button type="submit"><IoSend /></button>
       </form>
-     
+      {students.length ? students : <span>Nenhuma novidade até o momento.</span>}
       {
       students.map(student =>
        
       <Card
         key={uniqueID(99999)}
-        name={student.name} 
-        time={student.time}
+        name={student.name}
       />
      
       )}
-        <span>Nenhuma novidade até o momento.</span>
+        
         </div>
         </div>
           
