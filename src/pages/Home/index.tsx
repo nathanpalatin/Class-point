@@ -120,7 +120,7 @@ export function Home() {
         <input type="text" required onChange={e => setStudentName(e.target.value)} placeholder="O que está acontecendo?" />
         <button type="submit"><IoSend /></button>
       </form>
-      {students.length ? students : <span>Nenhuma novidade até o momento.</span>}
+      
       {
       students.map(student =>
        
