@@ -78,8 +78,8 @@ export function Home() {
           <h1>Insígnias</h1>
           <div>
             <img src={reactjs} className="tooltip" data-tip="ReactJS" alt="React JS" />
-            <img src={reactnative} data-tip="React Native" alt="React Native" />
-            <img src={php} data-tip="PHP" alt="PHP" />
+            <img src={reactnative} className="tooltip" data-tip="React Native" alt="React Native" />
+            <img src={php} className="tooltip" data-tip="PHP" alt="PHP" />
           </div>
       </div>
       </aside>
