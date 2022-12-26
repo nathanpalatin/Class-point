@@ -149,10 +149,6 @@ section {
 
   }
 
-  form input {
-    width: 80vw;
-  }
-
 }
 
 .cards:nth-child(3) div  {
@@ -222,7 +218,7 @@ footer{
 }
 
 form input {
-  width: 100%;
+  width: 80vw;
   padding:20px;
   outline: none;
   background: #E6E6E6;
