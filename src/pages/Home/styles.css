@@ -41,7 +41,7 @@ body{
 }
 
 main.cards:nth-child(1) {
-  align-items: inherit;
+  align-items: flex-start;
 }
 
 .cards:nth-child(3){

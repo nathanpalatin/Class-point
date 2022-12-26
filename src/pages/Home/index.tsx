@@ -110,7 +110,7 @@ export function Home() {
         <h1>Atualizações</h1>
         <div>
             <form onSubmit={handleAddStudent}>
-        <input type="text" required onChange={e => setStudentName(e.target.value)} placeholder="O que está acontecendo?" />
+        <input type="text" required onChange={e => setPost(e.target.value)} placeholder="O que está acontecendo?" />
         <button type="submit"><IoSend /></button>
       </form>
    
