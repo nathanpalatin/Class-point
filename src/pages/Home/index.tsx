@@ -71,9 +71,7 @@ export function Home() {
         })       
       }   
 
-    setStudents(prevState => [...prevState, newStudent])
-
-    //console.log(`O ${newStudent.name} está presente, chegou as ${newStudent.time}`);
+    setStudents(prevState => [...prevState, newStudent]);
     
     e.target.reset();
 
@@ -129,6 +127,7 @@ export function Home() {
       <Card
         key={uniqueID(99999)}
         name={student.name}
+        time={student.time}
       />
      
       )}

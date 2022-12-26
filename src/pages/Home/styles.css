@@ -152,10 +152,6 @@ section {
   flex-direction: row;
 }
 
-main .cards:nth-child(1)  {
-  align-items: flex-start;
-}
-
 .friends img {
   width: 80px;
   height: 80px;
@@ -224,13 +220,10 @@ form input {
   background: #E6E6E6;
   border: none;
   border-radius: 5px;
-  font-family: 'Open Sans';
-  font-size: 16px;
 }
 
  form button{
   width: 100%;
-  font-family: 'Open Sans';
   background: #0b3e52;
   font-weight: 700;
   color: white;
@@ -239,7 +232,6 @@ form input {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
   transition: filter 0.3s;
 }
 
