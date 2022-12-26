@@ -33,7 +33,7 @@ export function Home() {
 
   const [user, setUser] = useState<User>({} as User);
   
-  const [studentName, setStudentName] = useState("");
+  const [textPost, setPost] = useState("");
   const [students, setStudents] = useState<Cardprops[]>([]);
 
   useEffect(() => {
@@ -62,16 +62,11 @@ export function Home() {
     e.preventDefault();
     
       setTimeout(() => {
-      const newStudent = {
-        name: studentName,
-        time: new Date().toLocaleTimeString("pt-br", {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit'
-        })       
+      const newPost = {
+        post: textPost      
       }   
 
-    setStudents(prevState => [...prevState, newStudent]);
+    setPost(prevState => [...prevState, newPost]);
     
     e.target.reset();
 
@@ -120,19 +115,16 @@ export function Home() {
         <input type="text" required onChange={e => setStudentName(e.target.value)} placeholder="O que está acontecendo?" />
         <button type="submit"><IoSend /></button>
       </form>
-      
+   
       {
-      students.map(student =>
-       
+      students.map(student => 
       <Card
         key={uniqueID(99999)}
-        name={student.name}
+        name={student.post}
       />
      
       )}
-
-    {students.length ? students : 'Nenhuma novidade até o momento.'}
-        
+             
         </div>
         </div>
           
